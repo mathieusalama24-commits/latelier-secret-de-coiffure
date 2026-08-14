@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+/*
+  Polices auto-hébergées : aucune requête vers fonts.googleapis.com ni fonts.gstatic.com.
+  Un aller-retour de moins avant l'affichage du texte, une CSP plus stricte, et aucune adresse IP
+  de visiteuse transmise à un tiers avant consentement.
+  Sous-ensemble « latin » uniquement : il couvre les accents français, œ et les guillemets.
+*/
+@font-face {
+  font-family: "Bodoni Moda";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/BodoniModa-400-normal-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Bodoni Moda";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/BodoniModa-400-italic-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/Jost-300-normal-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Jost-400-normal-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/Jost-500-normal-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+/*
+  L'Atelier Secret de Coiffure — jetons de design
+  Base chaude relevée sur le salon (marbre clair, murs blanc cassé), noir aubergine et or de la
+  palette « Luxury », accent or rose repris de son logo — un serif rose bois.
+  Le fond n'est jamais blanc : c'est un champagne, pour que les photos sur mur blanc ressortent.
+*/
+@theme {
+  --color-ivory: #f5efe6; /* champagne — le fond principal */
+  --color-marble: #eae1d4; /* greige — sections alternées */
+  --color-nude: #dbc9b8;
+  --color-taupe: #6d5f52;
+  --color-ink: #221a25; /* noir aubergine, pas un noir neutre */
+  --color-ink-soft: #2f2433;
+  --color-gold: #bd996c;
+  --color-rose: #a9736c; /* or rose — grands titres et pictogrammes (3,4:1 sur champagne) */
+  --color-rose-deep: #8a544e; /* la même teinte assombrie pour le petit texte (5,3:1) */
+  --color-rose-light: #cb9a92; /* et éclaircie pour les fonds sombres (6,9:1 sur l'aubergine) */
+
+  --font-display: "Bodoni Moda", Georgia, serif;
+  --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
+
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* compense le header collant lors d'un saut d'ancre */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    /* un lavis très doux plutôt qu'un aplat : le fond respire sans jamais concurrencer les photos */
+    background-color: var(--color-ivory);
+    background-image:
+      radial-gradient(120% 70% at 85% 0%, rgba(189, 153, 108, 0.1), transparent 60%),
+      radial-gradient(90% 60% at 0% 100%, rgba(169, 115, 108, 0.07), transparent 55%);
+    background-attachment: fixed;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background-color: var(--color-ink);
+    color: var(--color-ivory);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  /* Titres fluides — jamais de taille fixe en px */
+  .text-display {
+    font-size: clamp(2.6rem, 7vw, 5.5rem);
+    line-height: 0.98;
+  }
+
+  .text-section {
+    font-size: clamp(2rem, 4.2vw, 3.4rem);
+    line-height: 1.05;
+  }
+
+  .eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+  }
+
+  .rule-gold {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--color-gold) 20%,
+      var(--color-gold) 80%,
+      transparent
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

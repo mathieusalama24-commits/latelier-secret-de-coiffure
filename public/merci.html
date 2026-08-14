@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Demande envoyée — L'Atelier Secret de Coiffure</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      @font-face { font-family: "Bodoni Moda"; font-style: normal; font-weight: 400; font-display: swap;
+        src: url("/fonts/BodoniModa-400-normal-latin.woff2") format("woff2"); }
+      @font-face { font-family: "Jost"; font-style: normal; font-weight: 300; font-display: swap;
+        src: url("/fonts/Jost-300-normal-latin.woff2") format("woff2"); }
+      @font-face { font-family: "Jost"; font-style: normal; font-weight: 500; font-display: swap;
+        src: url("/fonts/Jost-500-normal-latin.woff2") format("woff2"); }
+    </style>
+    <style>
+      :root {
+        --ivory: #f5efe6;
+        --ink: #221a25;
+        --taupe: #6d5f52;
+        --gold: #a9736c;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 2rem 1.25rem;
+        background: var(--ivory);
+        color: var(--ink);
+        font-family: "Jost", system-ui, sans-serif;
+        font-weight: 300;
+        -webkit-font-smoothing: antialiased;
+      }
+      main { max-width: 34rem; text-align: center; }
+      .eyebrow {
+        font-size: 0.6875rem;
+        font-weight: 500;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--taupe);
+      }
+      h1 {
+        font-family: "Bodoni Moda", Georgia, serif;
+        font-weight: 400;
+        font-size: clamp(2.2rem, 6vw, 3.4rem);
+        line-height: 1.05;
+        margin: 1.5rem 0 0;
+      }
+      h1 em { color: var(--gold); }
+      p { margin: 1.5rem 0 0; line-height: 1.7; color: var(--taupe); }
+      .rule {
+        width: 6rem;
+        height: 1px;
+        margin: 2.5rem auto;
+        background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      }
+      a {
+        display: inline-block;
+        padding: 1rem 1.75rem;
+        border-radius: 999px;
+        background: var(--ink);
+        color: var(--ivory);
+        text-decoration: none;
+        font-size: 0.6875rem;
+        font-weight: 500;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        transition: background-color 0.25s ease;
+      }
+      a:hover { background: #2f2433; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">L'Atelier Secret de Coiffure</p>
+      <h1>Votre demande <em>est partie.</em></h1>
+      <p>
+        Hélène vous recontacte pour convenir d'un créneau. Si votre demande concerne une date de
+        mariage, précisez-la dans votre message : ces rendez-vous se réservent longtemps à l'avance.
+      </p>
+      <div class="rule"></div>
+      <a href="/">Retour au site</a>
+    </main>
+  </body>
+</html>
