@@ -7,6 +7,7 @@ import { Prestations } from "@/components/sections/prestations"
 import { Transformations } from "@/components/sections/transformations"
 import { SalonSection } from "@/components/sections/salon"
 import { MarieeFormations } from "@/components/sections/mariee-formations"
+import { Produits } from "@/components/sections/produits"
 import { Helene } from "@/components/sections/helene"
 import { Faq } from "@/components/sections/faq"
 import { Avis } from "@/components/sections/avis"
@@ -30,6 +31,7 @@ export default function App() {
         <Prestations />
         <Transformations />
         <SalonSection />
+        <Produits />
         <Helene />
         <MarieeFormations />
         <Avis />

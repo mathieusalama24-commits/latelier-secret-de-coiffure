@@ -299,6 +299,45 @@ export const formations = {
 } as const;
 
 /**
+ * Photos de son matériel et de ses produits, issues de son ancienne galerie Planity.
+ * Origine confirmée par Mathieu : ce sont bien ses photos. À noter pour plus tard — le sol y est
+ * en bois alors que ses clichés récents montrent un marbre blanc : elles datent vraisemblablement
+ * du salon de Montesson, avant le déménagement.
+ */
+export const produits = {
+  eyebrow: "Sur vos cheveux",
+  titre: "Ce qui entre dans une couleur",
+  texte:
+    "Une couleur réussie tient autant au produit qu'au geste. Le soin profond Métal Detox ou K18 accompagne systématiquement une coloration, un balayage ou un ombré hair, pour limiter la casse sur une fibre déjà sensibilisée.",
+  images: [
+    {
+      src: "/images/produit-nuanciers.webp",
+      alt: "Nuanciers de coloration professionnelle déployés sur un plan de travail",
+      width: 900,
+      height: 601,
+    },
+    {
+      src: "/images/produit-coloration-pure.webp",
+      alt: "Étuis de coloration professionnelle PURE",
+      width: 900,
+      height: 601,
+    },
+    {
+      src: "/images/produit-blond-studio.webp",
+      alt: "Poudre décolorante Blond Studio et ciseaux dans le bac de travail",
+      width: 900,
+      height: 601,
+    },
+    {
+      src: "/images/produit-k18.webp",
+      alt: "Présentoir du soin K18 dans le salon",
+      width: 900,
+      height: 601,
+    },
+  ],
+} as const;
+
+/**
  * Portrait d'Hélène.
  *
  * Uniquement des faits sourcés : la description qu'elle a elle-même publiée sur Planity, les
