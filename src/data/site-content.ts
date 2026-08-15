@@ -262,13 +262,13 @@ export const salonSection = {
   */
   images: [
     {
-      src: "/images/salon-miroir.webp",
+      src: "/images/salon-balayage-miroir.webp",
       alt: "Balayage terminé devant le miroir rond noir du salon",
       width: 900,
       height: 1382,
     },
     {
-      src: "/images/salon-etagere.webp",
+      src: "/images/salon-detail-etagere.webp",
       alt: "Étagères du salon : enseigne lumineuse, magazines et présentoir",
       width: 429,
       height: 1021,
