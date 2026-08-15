@@ -17,9 +17,13 @@ export function SalonSection() {
                   height={photo.height}
                   loading="lazy"
                   decoding="async"
-                  // chaque photo garde son cadrage : le détail de décor est étroit et vertical,
-                  // le forcer en 3/4 le rognerait jusqu'à le rendre illisible
-                  className={index === 0 ? "w-full" : "mt-8 w-full md:mt-12"}
+                  // même format imposé aux deux : sans cela, la plus étroite s'agrandit
+                  // davantage à largeur de colonne égale et déséquilibre toute la section
+                  className={
+                    index === 0
+                      ? "aspect-[3/4] w-full object-cover"
+                      : "mt-8 aspect-[3/4] w-full object-cover md:mt-12"
+                  }
                 />
               ))}
             </div>

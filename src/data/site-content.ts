@@ -255,26 +255,25 @@ export const salonSection = {
     source: "Avis client, avril 2026",
   },
   /*
-    Cette section montre le lieu — elle ne doit donc contenir ni chevelure en cours de pose,
-    ni résultat terne : l'œil lit les cheveux avant la pièce, et deux photos « avant » y
-    donnaient l'impression d'un travail inachevé. D'où un vrai résultat d'un côté, et un pur
-    détail de décor de l'autre.
+    Cette section montre le lieu. Deux résultats terminés, choisis pour ce qu'on voit derrière :
+    le grand miroir rond sur l'un, le sol de marbre sur l'autre — exactement ce que décrit le
+    texte. Pas de chevelure en cours de pose, pas de résultat terne : dans une section sur le
+    salon, l'œil lit quand même les cheveux en premier.
   */
   images: [
     {
-      src: "/images/salon-balayage-miroir.webp",
-      alt: "Balayage terminé devant le miroir rond noir du salon",
+      src: "/images/salon-miroir-rond.webp",
+      alt: "Balayage terminé devant le grand miroir rond noir du salon",
       width: 900,
       height: 1382,
     },
     {
-      src: "/images/salon-detail-etagere.webp",
-      alt: "Étagères du salon : enseigne lumineuse, magazines et présentoir",
-      width: 429,
-      height: 1021,
+      src: "/images/salon-sol-marbre.webp",
+      alt: "Balayage doré ondulé, sol de marbre clair du salon en arrière-plan",
+      width: 900,
+      height: 1102,
     },
-  ],
-} as const;
+  ],} as const;
 
 export const mariee = {
   eyebrow: "Mariées",
