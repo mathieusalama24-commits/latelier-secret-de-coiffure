@@ -254,18 +254,24 @@ export const salonSection = {
     texte: "Cabinet très soigné, aéré et lumineux.",
     source: "Avis client, avril 2026",
   },
+  /*
+    Cette section montre le lieu — elle ne doit donc contenir ni chevelure en cours de pose,
+    ni résultat terne : l'œil lit les cheveux avant la pièce, et deux photos « avant » y
+    donnaient l'impression d'un travail inachevé. D'où un vrai résultat d'un côté, et un pur
+    détail de décor de l'autre.
+  */
   images: [
     {
       src: "/images/salon-miroir.webp",
-      alt: "Intérieur du salon : miroir rond noir, sol de marbre clair et fauteuil",
+      alt: "Balayage terminé devant le miroir rond noir du salon",
       width: 900,
-      height: 1184,
+      height: 1382,
     },
     {
       src: "/images/salon-etagere.webp",
-      alt: "Étagères du salon avec plantes et enseigne lumineuse",
-      width: 900,
-      height: 1177,
+      alt: "Étagères du salon : enseigne lumineuse, magazines et présentoir",
+      width: 429,
+      height: 1021,
     },
   ],
 } as const;
